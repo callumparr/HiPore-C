@@ -21,6 +21,6 @@ ln -s ${Rawdir}/${fq} ${tempdir}/${fq}
 seqkit fx2tab ${tempdir}/${fq} -i -n -l > "${sID}.fai"
 
 python $annopy "${tempdir}/${fq}" "${Mapdir}/${sID}.reads_map.paf" "${tempdir}" "${reffa}" "${gvdf}" "${ReAlignBash}" "${ChromCheckBash}" "${sID}.fai"
-mv ${tempdir}/Align_Fragment_RvdF.csv "${Exportdir}/${sID}.Align_Fragment_RvdF.csv"
+mv ${tempdir}/Read_Align_Fragment_RvdF.csv "${Exportdir}/${sID}.Align_Fragment_RvdF.csv" # Changed to Read_Align_Fragment_RvdF.csv to match output from annopy script
 echo "$sID annotation finished!"
 rm -rf ${tempdir}
